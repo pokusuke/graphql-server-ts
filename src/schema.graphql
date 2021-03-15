@@ -1,0 +1,18 @@
+  type Movie {
+    title: String
+    director: String
+  }
+
+  input MovieInput{
+    title:String
+    director:String
+  }
+
+  type Query {
+    movies: [Movie]
+  }
+  
+  type Mutation {
+    createMovie(input:MovieInput):Movie
+    updateMoive(input:MovieInput):Movie
+  }
